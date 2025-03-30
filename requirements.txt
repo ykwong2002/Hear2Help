@@ -1,3 +1,1 @@
-telepot==12.7
-urllib3>=1.26.16
-certifi>=2023.7.22
+python-telegram-bot>=20.0
