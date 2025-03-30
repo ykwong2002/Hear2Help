@@ -23,7 +23,7 @@ seekers = {} # List of seekers
 helpers = {} # List of helpers
 matches = {} # chat_id --> partner_chat_id
 
-chat_id_key, chat_id_owner, pasword, token = secret()
+chat_id_key, chat_id_owner, password, token = secret()
 bot = telepot.Bot(token)
 
 # Core Functions
@@ -120,8 +120,11 @@ def handle_message(msg):
 MessageLoop(bot, handle_message).run_as_thread()
 print("Bot is listening...")
 
-for id_user in chat_id_key:
-    bot.sendMessage(id_user, "Hear2Help bot is online!")
+# for id_user in chat_id_key:
+#     try:
+#         bot.sendMessage(id_user, 'Hear2Help bot is online.')
+#     except Exception as e:
+#         print(f"Failed to message {id_user}: {e}")
 
 while True:
     time.sleep(1)            
